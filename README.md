@@ -15,7 +15,8 @@ The implementation of the ESP32-based Locking System using the Telegram app invo
 
 ### Hardware Setup
 
-a> Components Needed:
+<h4>(a) Components Needed:</h4>
+
 -  ESP32 Microcontroller : This will be the central unit controlling the locking system, and it will handle communication with the Telegram bot and the lock hardware.
 -  Servo Motor or Electronic Lock : This will be the actuator for locking and unlocking. A servo motor can be used to physically lock/unlock a door, while an electronic solenoid lock can also be used for this purpose.
 -  Power Supply : The ESP32 and lock need a power supply. Depending on the components, this could range from a 5V to a 12V supply.
@@ -23,16 +24,19 @@ a> Components Needed:
 -  Relay Module (if needed) : If you're using a solenoid lock or any high-power electronic locking system, a relay module may be required to safely control the power to the lock from the ESP32.
 -  Resistors and Capacitors : These may be needed for additional components or to stabilize power to the ESP32 or locking mechanism.
 
-b> Basic Circuit Diagram:
+<h4>(b) Basic Circuit Diagram:</h4>
+
 -  The ESP32 will be connected to the relay or servo motor to control the locking mechanism.
 -  The GPIO pins of the ESP32 will be used to send signals to the servo motor or relay.
 -  A button or magnetic sensor can be added for local manual control of the locking system (optional).
 
 ### Software Development
-a> Programming Environment:
+<h4>(a) Programming Environment:</h4>
+
 Arduino IDE: The ESP32 can be programmed using the Arduino IDE. The IDE allows you to write, compile, and upload the code to the ESP32 board.
 
-b> Libraries Required:
+<h4>(b) Libraries Required:</h4>
+
 - WiFi.h: For connecting the ESP32 to Wi-Fi.
 - UniversalTelegramBot.h: A library for communicating with the Telegram Bot API.
 - Servo.h (if using a servo motor): For controlling the servo motor.
@@ -41,12 +45,14 @@ b> Libraries Required:
 ### Telegram Bot Configuration
 To control the lock via the Telegram app, you'll need to set up a Telegram Bot :
 
-a> Create a new Telegram Bot:
+<h4>(a) Create a new Telegram Bot:</h4>
+
 -  Open the Telegram app and search for the “BotFather.”
 -  Use the command /newbot to create a new bot.
 -  You’ll receive an API token for your bot. Save this token as you will need it in your code.
 
-b> Obtain Your Chat ID:
+<h4>(b) Obtain Your Chat ID:</h4>
+
 -  Start a conversation with your bot in Telegram.
 -  Use a bot like [@userinfobot] (https://t.me/userinfobot) to find your Chat ID. You’ll need this ID to send messages to your specific user.
 
@@ -59,12 +65,13 @@ Once the hardware is assembled and the software is loaded onto the ESP32, the sy
 ## RESULTS
 The implementation of the ESP32-based Locking System controlled through the Telegram app results in several key outcomes, which demonstrate the effectiveness and practicality of the solution. Below are the key outcomes of the system:
 
-a>Remote Access Control: 
+<h4>(a) Remote Access Control:</h4>
+
 One of the primary outcomes of this system is the ability to control the locking mechanism remotely, from anywhere with an internet connection. By leveraging the ESP32’s Wi-Fi capabilities and the Telegram messaging app, users can lock or unlock doors without being physically present. This outcome is especially beneficial for:
 -  Homeowners : Granting access to family members, friends, or service personnel without the need to provide physical keys.
 -  Businesses/Offices : Granting temporary access to employees or visitors without being physically on-site, improving the flexibility and security of office premises.
 
-b>Improved Security and Convenience:
+<h4>(b) Improved Security and Convenience:</h4>
 
 The system eliminates the need for traditional keys, which can be lost, duplicated, or stolen. Instead, digital communication via the Telegram bot ensures secure access management. This outcome significantly enhances security by:
 
