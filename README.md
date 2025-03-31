@@ -52,11 +52,11 @@ Prevents direct connection, ensuring safety and longevity.
 <h4>(b) Basic Circuit Diagram:</h4>
 
 <h3><b>Block Diagram</b></h3>
-<img src="./Images/Block_diagram.png" width="700">
+<p align="left"><img src="./Images/Block_diagram.png" width="700">
 <h3><b>Circuit Diagram</b></h3>
-<img src="./Images/Circuit_Diagram.jpeg" width="700">
+<p align="left"><img src="./Images/Circuit_Diagram.jpeg" width="700">
 <h3><b>Pin Diagram</b></h3>
-<img src="./Images/Pin_Diagram.jpeg" width="700">
+<p align="left"><img src="./Images/Pin_Diagram.jpeg" width="700">
 
 -  The ESP32 will be connected to the relay or servo motor to control the locking mechanism.
 -  The GPIO pins of the ESP32 will be used to send signals to the servo motor or relay.
@@ -65,11 +65,13 @@ Prevents direct connection, ensuring safety and longevity.
 ### Software Development
 <h4>(a) Programming Environment:</h4>
 
+<p align="centre"><img src="./Images/Arduino.png" width="700">
+
 Arduino IDE: The ESP32 can be programmed using the Arduino IDE. The IDE allows you to write, compile, and upload the code to the ESP32 board.
 
 <h4>(b) Libraries Required:</h4>
 
-<img src="./Images/DUMP.jpeg" width="700">
+<p align="centre"><img src="./Images/DUMP.jpeg" width="700">
 
 - WiFi.h: For connecting the ESP32 to Wi-Fi.
 - UniversalTelegramBot.h: A library for communicating with the Telegram Bot API.
@@ -81,13 +83,15 @@ To control the lock via the Telegram app, you'll need to set up a Telegram Bot :
 
 <h4>(a) Create a new Telegram Bot:</h4>
 
+<p align="centre"> <img src="./Images/Telegram.png" width="400">
+
 -  Open the Telegram app and search for the “BotFather.”
 -  Use the command /newbot to create a new bot.
 -  You’ll receive an API token for your bot. Save this token as you will need it in your code.
 
 <h4>(b) Obtain Your Chat ID:</h4>
 
-<img src="./Images/Bot.jpeg" width="700">
+<p align="centre"><img src="./Images/Bot.jpeg" width="700">
 
 -  Start a conversation with your bot in Telegram.
 -  Use a bot like [@userinfobot] (https://t.me/userinfobot) to find your Chat ID. You’ll need this ID to send messages to your specific user.
