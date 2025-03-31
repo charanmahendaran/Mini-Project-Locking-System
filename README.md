@@ -13,7 +13,7 @@ The implementation of the ESP32-based Locking System using the Telegram app invo
 -  Telegram Bot Configuration
 -  Integration and Testing
 
-## Hardware Setup
+### Hardware Setup
 
 <h3><b>(a) Components Needed:</b></h4>
 
@@ -62,6 +62,8 @@ Prevents direct connection, ensuring safety and longevity.
 -  The GPIO pins of the ESP32 will be used to send signals to the servo motor or relay.
 -  A button or magnetic sensor can be added for local manual control of the locking system (optional).
 
+<hr>
+
 ### Software Development
 <h4>(a) Programming Environment:</h4>
 
@@ -77,6 +79,8 @@ Arduino IDE: The ESP32 can be programmed using the Arduino IDE. The IDE allows y
 - UniversalTelegramBot.h: A library for communicating with the Telegram Bot API.
 - Servo.h (if using a servo motor): For controlling the servo motor.
 - ArduinoJson.h: For parsing JSON data from the Telegram bot.
+
+<hr>
 
 ### Telegram Bot Configuration
 To control the lock via the Telegram app, you'll need to set up a Telegram Bot :
@@ -96,11 +100,15 @@ To control the lock via the Telegram app, you'll need to set up a Telegram Bot :
 -  Start a conversation with your bot in Telegram.
 -  Use a bot like [@userinfobot] (https://t.me/userinfobot) to find your Chat ID. You’ll need this ID to send messages to your specific user.
 
+<hr>
+
 ### Integration and Testing
 Once the hardware is assembled and the software is loaded onto the ESP32, the system needs to be tested to ensure functionality:
 -  Connect the ESP32 to Wi-Fi : Verify the ESP32 can connect to your network.
 -  Test the Lock/Unlock Mechanism : Ensure the servo motor or relay activates correctly in response to commands sent from the Telegram bot.
 -  Test Telegram Commands : Send /lock and /unlock commands to the Telegram bot to verify the ESP32 responds appropriately, locking and unlocking the door.
+
+<b><hr></b>
 
 ## RESULTS
 The implementation of the ESP32-based Locking System controlled through the Telegram app results in several key outcomes, which demonstrate the effectiveness and practicality of the solution. Below are the key outcomes of the system:
@@ -121,7 +129,19 @@ The system eliminates the need for traditional keys, which can be lost, duplicat
 
 Additionally, the convenience of controlling access via a familiar mobile app (Telegram) enhances the user experience, ensuring the system is easy to use and doesn’t require additional hardware or software.
 
+<hr>
 
+## ACKNOWLEDGEMENT
+<b>I would like to express my heartfelt gratitude to Global Academy of Technology for providing the platform and resources necessary for the successful completion of this project.
+
+I extend my sincere appreciation to my project guide, Shazia Sulthana Ma’am, for her invaluable guidance, encouragement, and continuous support throughout this journey. Her expertise and insights have been instrumental in shaping my understanding and execution of the project.
+
+I also wish to thank IOTCICUITHUB for offering a comprehensive understanding of IoT and embedded systems. Their resources and support have greatly enhanced my knowledge and helped me implement the project effectively. Here's their website 
+
+Lastly, I am deeply grateful to my parents for their unwavering support and encouragement, which has been a constant source of motivation throughout this endeavor.
+
+Thank you all for your immense support and guidance!
+</b>
 
 
 
