@@ -136,7 +136,7 @@ Additionally, the convenience of controlling access via a familiar mobile app (T
 
 I extend my sincere appreciation to my project guide, Shazia Sulthana Ma’am, for her invaluable guidance, encouragement, and continuous support throughout this journey. Her expertise and insights have been instrumental in shaping my understanding and execution of the project.
 
-I also wish to thank IOT CICUIT HUB for offering a comprehensive understanding of IoT and embedded systems. Their resources and support have greatly enhanced my knowledge and helped me implement the project effectively. Here's the [link](https://iotcircuithub.com/esp32-cam-telegram-wifi-door-lock/).
+I also wish to thank IOT CIRCUIT HUB for offering a comprehensive understanding of IoT and embedded systems. Their resources and support have greatly enhanced my knowledge and helped me implement the project effectively. Here's the [link](https://iotcircuithub.com/esp32-cam-telegram-wifi-door-lock/).
 
 Lastly, I am deeply grateful to my parents for their unwavering support and encouragement, which has been a constant source of motivation throughout this endeavor.
 
