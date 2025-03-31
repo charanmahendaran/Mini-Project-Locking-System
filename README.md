@@ -13,23 +13,50 @@ The implementation of the ESP32-based Locking System using the Telegram app invo
 -  Telegram Bot Configuration
 -  Integration and Testing
 
-### Hardware Setup
+## Hardware Setup
 
-<h4><b>(a) Components Needed:</b></h4>
+<h3><b>(a) Components Needed:</b></h4>
 
--  <b>ESP32 Microcontroller : </b>This will be the central unit controlling the locking system, and it will handle communication with the Telegram bot and the lock hardware.
+-  <b>ESP32 Microcontroller : </b>The ESP32 is the central processing unit of the system, responsible for handling communication between the user and the lock mechanism. It connects to a Telegram bot for remote access, allowing users to lock/unlock the system via a chat interface.
+Features of ESP32:
+    *    Built-in Wi-Fi and Bluetooth for wireless control.
+    *    Multiple GPIO pins for interfacing with peripherals.
+    *    Low power consumption, suitable for IoT applications.
+    *    Can integrate with cameras for additional security (e.g., ESP32-CAM).
     <p align="centre"> <img src="./Images/ESP32_CAM.jpeg" width="400">
--  Servo Motor or Electronic Lock : This will be the actuator for locking and unlocking. A servo motor can be used to physically lock/unlock a door, while an electronic solenoid lock can also be used for this purpose.
+
+-  <b>Servo Motor or Electronic Lock : </b>The locking mechanism can be implemented using either a servo motor or an electronic solenoid lock.
+    *    Servo Motor (for Physical Locking)
+Moves between angles (e.g., 0° and 90°) to control a latch.Can be powered directly by the ESP32 or an external supply.
+    *    Electronic Solenoid Lock
+Uses electromagnetism to control a locking bolt.Requires higher voltage (typically 12V), needing a relay for safe ESP32 control.
     <p align="centre"> <img src="./Images/12V_Solenoid_Lock.jpg" width="400">
--  Power Supply : The ESP32 and lock need a power supply. Depending on the components, this could range from a 5V to a 12V supply.
+    
+-  <b>Power Supply : </b>A proper power source is needed to run both the ESP32 and the locking mechanism.
+Power Requirements:
+    *    ESP32 → 3.3V or 5V (USB power or regulated power supply).
+    *    Servo Motor → Typically 5V (depending on the model).
+    *    Solenoid Lock → Usually 12V, requiring an external power supply.
     <p align="centre"> <img src="./Images/12V_Power_Supply.jpg" width="400">
--  Jumper Wires and Breadboard : For wiring the components together.  
+    
+-  <b>Jumper Wires and Breadboard :</b> For wiring the components together.  
     <img src="./Images/Jumper_Cable.jpg" width="400"> <img src="./Images/Breadboard.jpg" width="500">
     
--  Relay Module (if needed) : If you're using a solenoid lock or any high-power electronic locking system, a relay module may be required to safely control the power to the lock from the ESP32.
--  Resistors and Capacitors : These may be needed for additional components or to stabilize power to the ESP32 or locking mechanism.
+-  <b>Relay Module (if needed) :</b> A relay module is needed when working with high-power components, such as a 12V solenoid lock, to safely switch power using the ESP32.
+    *    Why Use a Relay?
+            ESP32 operates at 3.3V logic, whereas a solenoid lock requires 12V.
+
+Prevents direct connection, ensuring safety and longevity.
+- <b> Resistors and Capacitors :</b> These may be needed for additional components or to stabilize power to the ESP32 or locking mechanism.
 
 <h4>(b) Basic Circuit Diagram:</h4>
+
+<h3><b>Block Diagram</b></h3>
+<img src="./Images/Block_diagram.png" width="700">
+<h3><b>Circuit Diagram</b></h3>
+<img src="./Images/Circuit_Diagram.jpeg" width="700">
+<h3><b>Pin Diagram</b></h3>
+<img src="./Images/Pin_Diagram.jpeg" width="700">
 
 -  The ESP32 will be connected to the relay or servo motor to control the locking mechanism.
 -  The GPIO pins of the ESP32 will be used to send signals to the servo motor or relay.
@@ -41,6 +68,8 @@ The implementation of the ESP32-based Locking System using the Telegram app invo
 Arduino IDE: The ESP32 can be programmed using the Arduino IDE. The IDE allows you to write, compile, and upload the code to the ESP32 board.
 
 <h4>(b) Libraries Required:</h4>
+
+<img src="./Images/DUMP.jpeg" width="700">
 
 - WiFi.h: For connecting the ESP32 to Wi-Fi.
 - UniversalTelegramBot.h: A library for communicating with the Telegram Bot API.
@@ -57,6 +86,8 @@ To control the lock via the Telegram app, you'll need to set up a Telegram Bot :
 -  You’ll receive an API token for your bot. Save this token as you will need it in your code.
 
 <h4>(b) Obtain Your Chat ID:</h4>
+
+<img src="./Images/Bot.jpeg" width="700">
 
 -  Start a conversation with your bot in Telegram.
 -  Use a bot like [@userinfobot] (https://t.me/userinfobot) to find your Chat ID. You’ll need this ID to send messages to your specific user.
