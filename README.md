@@ -15,12 +15,17 @@ The implementation of the ESP32-based Locking System using the Telegram app invo
 
 ### Hardware Setup
 
-<h4>(a) Components Needed:</h4>
+<h4><b>(a) Components Needed:</b></h4>
 
--  ESP32 Microcontroller : This will be the central unit controlling the locking system, and it will handle communication with the Telegram bot and the lock hardware.
+-  <b>ESP32 Microcontroller : </b>This will be the central unit controlling the locking system, and it will handle communication with the Telegram bot and the lock hardware.
+    <p align="centre"> <img src="./Images/ESP32_CAM.jpeg" width="400">
 -  Servo Motor or Electronic Lock : This will be the actuator for locking and unlocking. A servo motor can be used to physically lock/unlock a door, while an electronic solenoid lock can also be used for this purpose.
+    <p align="centre"> <img src="./Images/12V_Solenoid_Lock.jpg" width="400">
 -  Power Supply : The ESP32 and lock need a power supply. Depending on the components, this could range from a 5V to a 12V supply.
--  Jumper Wires and Breadboard : For wiring the components together.
+    <p align="centre"> <img src="./Images/12V_Power_Supply.jpg" width="400">
+-  Jumper Wires and Breadboard : For wiring the components together.  
+    <img src="./Images/Jumper_Cable.jpg" width="400"> <img src="./Images/Breadboard.jpg" width="500">
+    
 -  Relay Module (if needed) : If you're using a solenoid lock or any high-power electronic locking system, a relay module may be required to safely control the power to the lock from the ESP32.
 -  Resistors and Capacitors : These may be needed for additional components or to stabilize power to the ESP32 or locking mechanism.
 
